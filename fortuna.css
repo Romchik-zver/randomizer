@@ -1,0 +1,199 @@
+:root {
+    --wheel-rotation: 0deg;
+}
+#back-link {
+  text-decoration: none;
+  color: #767676;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+h1{
+  text-align: center;
+  color: #424242;
+  font-family: Arial, sans-serif;
+}
+
+#wheel {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 5px solid black; /* У border должно быть стиль и толщина */
+  margin: 20px auto;
+  box-shadow: 0 0 10px #aaa;
+  transform: rotate(var(--wheel-rotation));
+  transition: transform 4s cubic-bezier(0.2, 0.8, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background-color: #000000;
+    border-color: #ffffff;
+    box-shadow: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 10%;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+button:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: #000000;
+  color: #000000;
+  border-color: #000000;
+}
+button:active{
+  background-color: aliceblue;
+  box-shadow: #000000;
+  color: #000000;
+  transform: rotateX(20deg);
+  
+}
+.wheel-and-spin{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+/* #btn-spin{
+  position:absolute;
+  
+} */
+
+p{
+  /* width: 20px;
+  height: 20px; */
+  border-radius: 10%;
+  border-color: #000000;
+  
+}
+
+input{
+  border-radius: 5%;
+  background-origin: padding-box;
+  border-color: #000000;
+  background-color: aliceblue;
+  font-size: 20px;
+  height: 40px;
+}
+li{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.segment-text {
+    position: absolute; /* ОБЯЗАТЕЛЬНО! */
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0; /* Вращение от центра колеса */
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.fortuna-result{
+  width: 0px;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 150px solid #000000;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  margin-right: 300px;
+}
+/* Стили для модального окна */
+#myDialog {
+    /* Позиционирование и размеры */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    
+    /* Внешний вид */
+    border: none;
+    border-radius: 12px;
+    padding: 30px 25px 25px;
+    background: white;
+    
+    /* Тень для объемности */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    
+    /* Центрирование текста */
+    text-align: center;
+}
+
+/* Фон модального окна */
+#myDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+/* Кнопка закрытия (крестик) */
+#myDialog .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Линии крестика */
+#myDialog .close-btn::before,
+#myDialog .close-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    background: #666;
+    transform-origin: center;
+}
+
+#myDialog .close-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#myDialog .close-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Эффекты при наведении на крестик */
+#myDialog .close-btn:hover {
+    background: #e0e0e0;
+    transform: scale(1.1);
+}
+
+#myDialog .close-btn:active {
+    transform: scale(0.95);
+}
+
+/* Стили текста */
+#myDialog h2 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#myDialog p {
+    margin: 0 0 10px 0;
+    color: #555;
+    line-height: 1.4;
+    font-size: 1rem;
+}
