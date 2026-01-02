@@ -1,3 +1,4 @@
+
 let btn = $("#flipButton");
 let coin = $("#coin");
 let resultText = $("#result");
