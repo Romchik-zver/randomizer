@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta charset="UTF-8" />
+    <title>Wheel of Fortuna</title>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <link rel="stylesheet" href="fortuna.css" />
+  </head>
+
+    
+  <body>
+    <a id="back-link" href="index.html"><-Back</a>
+    <br>
+      <h1>Enter a any word, number, whatever you want and this will add to wheel of fortuna
+    </h1>
+    <div class = "wheel-and-spin">
+<div class = "btns">
+    <input type="text" id="input-adder" placeholder="Enter your variants">
+    <p id = "msg" class="animate__animated" >Ошибка ввода, вводите <strong>не</strong>повторяющиеся <strong>не</strong>пустые варианты</p>
+    <br />
+    
+    <button class="btn-add" >Add more</button>
+    <br />
+    <button class="btn-clear" >Remove</button>
+    <br />
+    <button class="btn-clear-all" >Clear All</button>
+    </div>
+
+    <dialog id="myDialog"><button class = "close-btn"onclick="window.myDialog.close()"></button><h2>RESULT 👑</h2></dialog>
+    <div class = "fortuna-result"></div>
+    <div id="wheel"></div>
+    <button id="btn-spin">Spin</button>
+    </div>
+    
+    <ol class="options"></ol>
+    <script src="fortuna.js"></script>
+  </body>
+</html>
